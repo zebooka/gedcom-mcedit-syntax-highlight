@@ -1,0 +1,96 @@
+# GEDCOM syntax highlight
+
+context default
+    keyword whole BIRT\sY black green
+    keyword whole BIRT green
+    keyword whole DEAT\sY black red
+    keyword whole DEAT red
+
+    keyword whole FAMS white gray
+    keyword whole FAMC gray yellow
+    keyword whole HUSB black brightcyan
+    keyword whole WIFE black magenta
+    keyword whole CHIL black yellow
+
+    keyword whole @*@ gray
+
+context linestart 0 \n white black
+    keyword linestart 0 gray
+    keyword HEAD black white
+    keyword TRLR black white
+    keyword whole INDI red
+    keyword whole FAM yellow
+    keyword whole NOTE gray
+    keyword whole SUBM black white
+    keyword whole SUBN black white
+    keyword whole REPO black white
+    keyword whole SOUR black white
+    keyword whole OBJE black magenta
+    keyword @ gray
+    keyword @*@ white black
+
+context exclusive NAME\s \n lightgray black
+
+context exclusive SEX \n white
+    keyword F magenta
+    keyword M brightcyan
+
+context exclusive BIRT linestart 1 brightgreen
+    keyword whole linestart 2 lightgray
+    keyword whole DATE green
+    keyword whole PLAC green
+    keyword whole NOTE green
+
+    keyword whole FROM gray
+    keyword whole TO gray
+    keyword whole ABT gray
+    keyword whole BEF gray
+    keyword whole AFT gray
+    keyword whole BET gray
+    keyword whole AND gray
+    keyword whole ABT gray
+    keyword whole EST gray
+    keyword whole CAL gray
+    keyword whole INT gray
+
+context exclusive DEAT linestart 1 brightred
+    keyword whole linestart 2 lightgray
+    keyword whole DATE red
+    keyword whole PLAC red
+    keyword whole NOTE red
+
+    keyword whole FROM gray
+    keyword whole TO gray
+    keyword whole ABT gray
+    keyword whole BEF gray
+    keyword whole AFT gray
+    keyword whole BET gray
+    keyword whole AND gray
+    keyword whole ABT gray
+    keyword whole EST gray
+    keyword whole CAL gray
+    keyword whole INT gray
+
+context exclusive DATE \n brightcyan
+    keyword whole FROM gray
+    keyword whole TO gray
+    keyword whole ABT gray
+    keyword whole BEF gray
+    keyword whole AFT gray
+    keyword whole BET gray
+    keyword whole AND gray
+    keyword whole ABT gray
+    keyword whole EST gray
+    keyword whole CAL gray
+    keyword whole INT gray
+
+context exclusive TIME \n cyan
+
+context exclusive NOTE \n gray
+context exclusive CONT \n gray
+context exclusive CONC \n gray
+
+context exclusive PHON \n magenta
+context exclusive EMAIL \n magenta
+context exclusive WWW \n magenta
+
