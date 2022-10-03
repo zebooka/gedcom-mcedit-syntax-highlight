@@ -1,6 +1,12 @@
-# GEDCOM syntax highlight
+# GEDCOM v5.5.1 syntax highlight
 
 context default
+    keyword linestart 0 gray black
+    keyword linestart 1 black gray
+    keyword linestart 2 lightgray
+    keyword linestart 3 gray
+    keyword linestart 4 black
+
     keyword whole BIRT\sY black green
     keyword whole BIRT green
     keyword whole DEAT\sY black red
@@ -15,7 +21,6 @@ context default
     keyword whole @*@ gray
 
 context linestart 0 \n white black
-    keyword linestart 0 gray
     keyword HEAD black white
     keyword TRLR black white
     keyword whole INDI red
@@ -36,7 +41,10 @@ context exclusive SEX \n white
     keyword M brightcyan
 
 context exclusive BIRT linestart 1 brightgreen
-    keyword whole linestart 2 lightgray
+    keyword whole linestart 2 black green
+    keyword whole linestart 3 black green
+    keyword whole linestart 4 black green
+
     keyword whole DATE green
     keyword whole PLAC green
     keyword whole NOTE green
@@ -54,7 +62,10 @@ context exclusive BIRT linestart 1 brightgreen
     keyword whole INT gray
 
 context exclusive DEAT linestart 1 brightred
-    keyword whole linestart 2 lightgray
+    keyword whole linestart 2 black red
+    keyword whole linestart 3 black red
+    keyword whole linestart 4 black red
+
     keyword whole DATE red
     keyword whole PLAC red
     keyword whole NOTE red
@@ -93,4 +104,3 @@ context exclusive CONC \n gray
 context exclusive PHON \n magenta
 context exclusive EMAIL \n magenta
 context exclusive WWW \n magenta
-
