@@ -1,40 +1,50 @@
 # GEDCOM v5.5.1 syntax highlight
 
 context default
-    keyword linestart 0 gray black
-    keyword linestart 1 black gray
+    keyword linestart 0 black white
+    keyword linestart 1 black white
     keyword linestart 2 lightgray
     keyword linestart 3 gray
     keyword linestart 4 black
+    keyword linestart 5 black
+    
+    keyword whole NAME white
 
-    keyword whole BIRT\sY black green
-    keyword whole BIRT green
+    keyword whole BIRT\sY black brightgreen
+    keyword whole BIRT brightgreen
     keyword whole DEAT\sY black red
-    keyword whole DEAT red
+    keyword whole DEAT brightred
+
 
     keyword whole FAMS white gray
     keyword whole FAMC gray yellow
     keyword whole HUSB black brightcyan
     keyword whole WIFE black magenta
-    keyword whole CHIL black yellow
+    keyword whole CHIL black brown
 
     keyword whole @*@ gray
 
 context linestart 0 \n white black
+    keyword 0 gray black
     keyword HEAD black white
     keyword TRLR black white
-    keyword whole INDI red
-    keyword whole FAM yellow
-    keyword whole NOTE gray
+    keyword whole INDI white brightred
+    keyword whole FAM white magenta
+    keyword whole NOTE white gray
     keyword whole SUBM black white
     keyword whole SUBN black white
     keyword whole REPO black white
     keyword whole SOUR black white
-    keyword whole OBJE black magenta
+    keyword whole OBJE black white
     keyword @ gray
     keyword @*@ white black
 
-context exclusive NAME\s \n lightgray black
+context exclusive NAME\s \n black yellow
+context exclusive TYPE\s \n brightcyan
+
+context exclusive HUSB \n brightcyan
+context exclusive WIFE \n brightmagenta
+context exclusive CHIL \n brown
 
 context exclusive SEX \n white
     keyword F magenta
@@ -47,7 +57,10 @@ context exclusive BIRT linestart 1 brightgreen
 
     keyword whole DATE green
     keyword whole PLAC green
+    keyword whole CAUS green
     keyword whole NOTE green
+    keyword whole CONT green
+    keyword whole CONC green
 
     keyword whole FROM gray
     keyword whole TO gray
@@ -68,7 +81,10 @@ context exclusive DEAT linestart 1 brightred
 
     keyword whole DATE red
     keyword whole PLAC red
+    keyword whole CAUS red
     keyword whole NOTE red
+    keyword whole CONT red
+    keyword whole CONC red
 
     keyword whole FROM gray
     keyword whole TO gray
