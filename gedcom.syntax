@@ -1,12 +1,15 @@
 # GEDCOM v5.5.1 syntax highlight
 
 context default
-    keyword linestart 0 black white
     keyword linestart 1 black white
-    keyword linestart 2 lightgray
+    keyword linestart 2 gray
     keyword linestart 3 gray
-    keyword linestart 4 black
-    keyword linestart 5 black
+    keyword linestart 4 gray
+    keyword linestart 5 gray
+    keyword linestart 6 gray
+    keyword linestart 7 gray
+    keyword linestart 8 gray
+    keyword linestart 9 gray
     
     keyword whole NAME white
 
@@ -14,6 +17,10 @@ context default
     keyword whole BIRT brightgreen
     keyword whole DEAT\sY black red
     keyword whole DEAT brightred
+    keyword whole CREM\sY black red
+    keyword whole CREM red
+    keyword whole BURI\sY black red
+    keyword whole BURI red
 
 
     keyword whole FAMS white gray
@@ -31,11 +38,11 @@ context linestart 0 \n white black
     keyword whole INDI white brightred
     keyword whole FAM white magenta
     keyword whole NOTE white gray
-    keyword whole SUBM black white
-    keyword whole SUBN black white
-    keyword whole REPO black white
-    keyword whole SOUR black white
-    keyword whole OBJE black white
+    keyword whole SUBM black gray
+    keyword whole SUBN black gray
+    keyword whole REPO black gray
+    keyword whole SOUR black gray
+    keyword whole OBJE black gray
     keyword @ gray
     keyword @*@ white black
 
@@ -50,53 +57,93 @@ context exclusive SEX \n white
     keyword F magenta
     keyword M brightcyan
 
-context exclusive BIRT linestart 1 brightgreen
-    keyword whole linestart 2 black green
-    keyword whole linestart 3 black green
-    keyword whole linestart 4 black green
-
-    keyword whole DATE green
-    keyword whole PLAC green
-    keyword whole CAUS green
+context exclusive BIRT linestart 1 gray
+    keyword DATE*\n brightgreen
+    keyword CAUS*\n brightgreen
+    keyword PLAC*\n brightgreen
+    keyword whole AGE green
+    keyword whole MAP green
+    keyword whole LATI green
+    keyword whole LONG green
+    keyword whole NOTE green
+    keyword whole CONT green
+    keyword whole CONC green
+context exclusive BIRT\sY linestart 1 gray
+    keyword DATE*\n brightgreen
+    keyword CAUS*\n brightgreen
+    keyword PLAC*\n brightgreen
+    keyword whole AGE green
+    keyword whole MAP green
+    keyword whole LATI green
+    keyword whole LONG green
     keyword whole NOTE green
     keyword whole CONT green
     keyword whole CONC green
 
-    keyword whole FROM gray
-    keyword whole TO gray
-    keyword whole ABT gray
-    keyword whole BEF gray
-    keyword whole AFT gray
-    keyword whole BET gray
-    keyword whole AND gray
-    keyword whole ABT gray
-    keyword whole EST gray
-    keyword whole CAL gray
-    keyword whole INT gray
-
-context exclusive DEAT linestart 1 brightred
-    keyword whole linestart 2 black red
-    keyword whole linestart 3 black red
-    keyword whole linestart 4 black red
-
-    keyword whole DATE red
-    keyword whole PLAC red
-    keyword whole CAUS red
+context exclusive DEAT linestart 1 gray
+    keyword DATE*\n brightred
+    keyword PLAC*\n brightred
+    keyword CAUS*\n brightred
+    keyword whole AGE red
+    keyword whole MAP red
+    keyword whole LATI red
+    keyword whole LONG red
+    keyword whole NOTE red
+    keyword whole CONT red
+    keyword whole CONC red
+context exclusive DEAT\sY linestart 1 gray
+    keyword DATE*\n brightred
+    keyword PLAC*\n brightred
+    keyword CAUS*\n brightred
+    keyword whole AGE red
+    keyword whole MAP red
+    keyword whole LATI red
+    keyword whole LONG red
     keyword whole NOTE red
     keyword whole CONT red
     keyword whole CONC red
 
-    keyword whole FROM gray
-    keyword whole TO gray
-    keyword whole ABT gray
-    keyword whole BEF gray
-    keyword whole AFT gray
-    keyword whole BET gray
-    keyword whole AND gray
-    keyword whole ABT gray
-    keyword whole EST gray
-    keyword whole CAL gray
-    keyword whole INT gray
+context exclusive BURI linestart 1 gray
+    keyword DATE*\n red
+    keyword PLAC*\n red
+    keyword CAUS*\n red
+    keyword whole MAP red
+    keyword whole LATI red
+    keyword whole LONG red
+    keyword whole NOTE red
+    keyword whole CONT red
+    keyword whole CONC red
+context exclusive BURI\sY linestart 1 gray
+    keyword DATE*\n red
+    keyword PLAC*\n red
+    keyword CAUS*\n red
+    keyword whole MAP red
+    keyword whole LATI red
+    keyword whole LONG red
+    keyword whole NOTE red
+    keyword whole CONT red
+    keyword whole CONC red
+
+context exclusive CREM linestart 1 gray
+    keyword DATE*\n red
+    keyword PLAC*\n red
+    keyword CAUS*\n red
+    keyword whole MAP red
+    keyword whole LATI red
+    keyword whole LONG red
+    keyword whole NOTE red
+    keyword whole CONT red
+    keyword whole CONC red
+context exclusive CREM\s linestart 1 gray
+    keyword DATE*\n red
+    keyword PLAC*\n red
+    keyword CAUS*\n red
+    keyword whole MAP red
+    keyword whole LATI red
+    keyword whole LONG red
+    keyword whole NOTE red
+    keyword whole CONT red
+    keyword whole CONC red
 
 context exclusive DATE \n brightcyan
     keyword whole FROM gray
@@ -120,3 +167,4 @@ context exclusive CONC \n gray
 context exclusive PHON \n magenta
 context exclusive EMAIL \n magenta
 context exclusive WWW \n magenta
+context exclusive SOUR \n magenta
