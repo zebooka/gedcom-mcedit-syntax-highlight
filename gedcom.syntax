@@ -18,18 +18,20 @@ context default
     keyword whole DEAT\sY black red
     keyword whole DEAT brightred
     keyword whole CREM\sY black red
-    keyword whole CREM red
+    keyword whole CREM brightred
     keyword whole BURI\sY black red
-    keyword whole BURI red
+    keyword whole BURI brightred
 
 
     keyword whole FAMS white gray
     keyword whole FAMC gray yellow
-    keyword whole HUSB black brightcyan
-    keyword whole WIFE black magenta
-    keyword whole CHIL black brown
+    keyword whole HUSB cyan
+    keyword whole WIFE magenta
+    keyword whole CHIL brown
 
     keyword whole @*@ gray
+
+    keyword 0\sHEAD\n black white
 
 context linestart 0 \n white black
     keyword 0 gray black
@@ -51,10 +53,12 @@ context exclusive TYPE\s \n brightcyan
 
 context exclusive HUSB \n brightcyan
 context exclusive WIFE \n brightmagenta
-context exclusive CHIL \n brown
+context exclusive CHIL \n yellow
+context exclusive FAMS \n white
+context exclusive FAMC \n yellow
 
 context exclusive SEX \n white
-    keyword F magenta
+    keyword F brightmagenta
     keyword M brightcyan
 
 context exclusive BIRT linestart 1 gray
@@ -104,9 +108,9 @@ context exclusive DEAT\sY linestart 1 gray
     keyword whole CONC red
 
 context exclusive BURI linestart 1 gray
-    keyword DATE*\n red
-    keyword PLAC*\n red
-    keyword CAUS*\n red
+    keyword DATE*\n brightred
+    keyword PLAC*\n brightred
+    keyword CAUS*\n brightred
     keyword whole MAP red
     keyword whole LATI red
     keyword whole LONG red
@@ -114,9 +118,9 @@ context exclusive BURI linestart 1 gray
     keyword whole CONT red
     keyword whole CONC red
 context exclusive BURI\sY linestart 1 gray
-    keyword DATE*\n red
-    keyword PLAC*\n red
-    keyword CAUS*\n red
+    keyword DATE*\n brightred
+    keyword PLAC*\n brightred
+    keyword CAUS*\n brightred
     keyword whole MAP red
     keyword whole LATI red
     keyword whole LONG red
@@ -125,9 +129,9 @@ context exclusive BURI\sY linestart 1 gray
     keyword whole CONC red
 
 context exclusive CREM linestart 1 gray
-    keyword DATE*\n red
-    keyword PLAC*\n red
-    keyword CAUS*\n red
+    keyword DATE*\n brightred
+    keyword PLAC*\n brightred
+    keyword CAUS*\n brightred
     keyword whole MAP red
     keyword whole LATI red
     keyword whole LONG red
@@ -135,9 +139,9 @@ context exclusive CREM linestart 1 gray
     keyword whole CONT red
     keyword whole CONC red
 context exclusive CREM\s linestart 1 gray
-    keyword DATE*\n red
-    keyword PLAC*\n red
-    keyword CAUS*\n red
+    keyword DATE*\n brightred
+    keyword PLAC*\n brightred
+    keyword CAUS*\n brightred
     keyword whole MAP red
     keyword whole LATI red
     keyword whole LONG red
