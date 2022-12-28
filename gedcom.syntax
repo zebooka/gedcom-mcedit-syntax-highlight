@@ -22,12 +22,13 @@ context default
     keyword whole BURI\sY black red
     keyword whole BURI brightred
 
-
     keyword whole FAMS white gray
     keyword whole FAMC gray yellow
     keyword whole HUSB cyan
     keyword whole WIFE magenta
     keyword whole CHIL brown
+
+    keyword whole \{NEWS\}\[1234567890\].\[1234567890\] magenta
 
     keyword whole @*@ gray
 
@@ -69,6 +70,7 @@ context exclusive BIRT linestart 1 gray
     keyword whole MAP green
     keyword whole LATI green
     keyword whole LONG green
+    keyword whole \{NEWS\}\[1234567890\].\[1234567890\] brightgreen
     keyword whole NOTE green
     keyword whole CONT green
     keyword whole CONC green
@@ -80,6 +82,7 @@ context exclusive BIRT\sY linestart 1 gray
     keyword whole MAP green
     keyword whole LATI green
     keyword whole LONG green
+    keyword whole \{NEWS\}\[1234567890\].\[1234567890\] brightgreen
     keyword whole NOTE green
     keyword whole CONT green
     keyword whole CONC green
@@ -92,6 +95,7 @@ context exclusive DEAT linestart 1 gray
     keyword whole MAP red
     keyword whole LATI red
     keyword whole LONG red
+    keyword whole \{NEWS\}\[1234567890\].\[1234567890\] brightred
     keyword whole NOTE red
     keyword whole CONT red
     keyword whole CONC red
@@ -103,6 +107,7 @@ context exclusive DEAT\sY linestart 1 gray
     keyword whole MAP red
     keyword whole LATI red
     keyword whole LONG red
+    keyword whole \{NEWS\}\[1234567890\].\[1234567890\] brightred
     keyword whole NOTE red
     keyword whole CONT red
     keyword whole CONC red
@@ -114,6 +119,7 @@ context exclusive BURI linestart 1 gray
     keyword whole MAP red
     keyword whole LATI red
     keyword whole LONG red
+    keyword whole \{NEWS\}\[1234567890\].\[1234567890\] brightred
     keyword whole NOTE red
     keyword whole CONT red
     keyword whole CONC red
@@ -124,6 +130,7 @@ context exclusive BURI\sY linestart 1 gray
     keyword whole MAP red
     keyword whole LATI red
     keyword whole LONG red
+    keyword whole \{NEWS\}\[1234567890\].\[1234567890\] brightred
     keyword whole NOTE red
     keyword whole CONT red
     keyword whole CONC red
@@ -135,6 +142,7 @@ context exclusive CREM linestart 1 gray
     keyword whole MAP red
     keyword whole LATI red
     keyword whole LONG red
+    keyword whole \{NEWS\}\[1234567890\].\[1234567890\] brightred
     keyword whole NOTE red
     keyword whole CONT red
     keyword whole CONC red
@@ -145,6 +153,7 @@ context exclusive CREM\s linestart 1 gray
     keyword whole MAP red
     keyword whole LATI red
     keyword whole LONG red
+    keyword whole \{NEWS\}\[1234567890\].\[1234567890\] brightred
     keyword whole NOTE red
     keyword whole CONT red
     keyword whole CONC red
