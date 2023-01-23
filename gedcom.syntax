@@ -14,13 +14,13 @@ context default
     keyword whole NAME white
 
     keyword whole BIRT\sY black brightgreen
-    keyword whole BIRT brightgreen
-    keyword whole DEAT\sY black red
-    keyword whole DEAT brightred
+    keyword whole BIRT black brightgreen
+    keyword whole DEAT\sY black brightred
+    keyword whole DEAT black brightred
     keyword whole CREM\sY black red
-    keyword whole CREM brightred
+    keyword whole CREM black brightred
     keyword whole BURI\sY black red
-    keyword whole BURI brightred
+    keyword whole BURI black brightred
 
     keyword whole FAMS white gray
     keyword whole FAMC gray yellow
@@ -146,7 +146,7 @@ context exclusive CREM linestart 1 gray
     keyword whole NOTE red
     keyword whole CONT red
     keyword whole CONC red
-context exclusive CREM\s linestart 1 gray
+context exclusive CREM\sY linestart 1 gray
     keyword DATE*\n brightred
     keyword PLAC*\n brightred
     keyword CAUS*\n brightred
